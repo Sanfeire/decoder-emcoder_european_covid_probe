@@ -1,0 +1,5 @@
+>>> data = (b'\xd2\x84X*\xa2\x01&\x04X$bdfc2bda-6c74-40ec-a530-8d04045e33a2\xa0X\xf6\xa4\x01bDE\x04\x1ac.\xfc\xa9\x06\x1
+aaM\xc9)9\x01\x03\xa1\x01\xa4av\x81\xaabcix\x1eURN:UVCI:01:DE:187/37512422923bcobDEbdn\x02bdtj2021-09-24bistRobert Koch-InstitutbmamORG-100030215bmplEU/1/20/1528bsd\x02btgi840539006bvpj1119349007cdobj1956-05-12cnam\xa4bfngSimpsonbgneHomercfntgSIMPSONcgnteHOMERcvere1.0.0X@\xfa\xa4)\xaa\x99 \xaf\x8f\xda\x11&\xa9\xae<\xd1F\xca\xcb\xe3\r\xef\x0f\x96\xc7\xb0\x83,\xb1|\xf2u\x10\xc0,\xac\xf7\x87\x06/[5\x8a\x84+\xc8\x8c\x06\x95J\x004;\x15P2\xcbr]~\x95\xae^6l')
+>>> cose = CoseMessage.decode(data)
+>>> print(cose)
+<COSE_Sign1: [{'Algorithm': 'Es256', 'KID': b'bdfc2bda-6c74-40ec-a530-8d04045e33a2'}, {}, b'\xa4\x01bDE' ... (246 B), b'\xfa\xa4)\xaa\x99' ... (64 B)]>

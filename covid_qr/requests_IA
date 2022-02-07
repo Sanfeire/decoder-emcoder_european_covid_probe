@@ -1,0 +1,23 @@
+┌──(breakshacker㉿MSI)-[/mnt/c/Users/santi]
+└─$ bash request_ai.sh
+Bienvenid@, haz tu pregunta o comentario ----> \n\n
+Quiero que crees un programa en python que firme un código CBOR y lo convierta en COSE
+{"id": "cmpl-4JA1le04lfqOjURMnUDesdKpzigvs", "object": "text_completion", "created": 1640472125, "model": "davinci-instruct-v3:2021-11-19", "choices": [{"text": "\n\n#!/usr/bin/env python import cbor import cose with open(\"file.cbor\", \"rb\") as cbor_file: data = cbor.load(cbor_file) with open(\"file.cose\", \"wb\") as cose_file: cose.encode(data, \"utf-8\")", "index": 0, "logprobs": null, "finish_reason": "stop"}]}
+
+┌──(breakshacker㉿MSI)-[/mnt/c/Users/santi]
+└─$ bash request_ai.sh
+Bienvenid@, haz tu pregunta o comentario ----> \n\n
+Haz un programa en python que firme un código CBOR
+{"id": "cmpl-4JA4I5Je0v2zwizIdVAm9LmGOK0G4", "object": "text_completion", "created": 1640472282, "model": "davinci-instruct-v3:2021-11-19", "choices": [{"text": "\n\nimport cbor\n\ndef sign(message):\n\n# message es el mensaje a firmar\n\nkey = \"12345678901234567890\"\n\n# el cuerpo de la clave\n\nc = cbor.encode(message)\n\n# el cuerpo de la clave se firma con la funci\u00f3n de hash\n\nhash = cbor.hash_sha256(c)\n\n# se genera una firma\n\nsignature = cbor.encode(hash)\n\nreturn signature\n\nif __name__ == \"__main__\":\n\n# se firma un mensaje\n\nmessage = \"hola mundo\"\n\nsign(message)", "index": 0, "logprobs": null, "finish_reason": "stop"}]}
+
+┌──(breakshacker㉿MSI)-[/mnt/c/Users/santi]
+└─$ bash request_ai.sh
+Bienvenid@, haz tu pregunta o comentario ----> \n\n
+Haz un programa que cree un COSE a partir de un CBOR
+{"id": "cmpl-4JA54tR4skd9yc81r9UWbCo0fZJMQ", "object": "text_completion", "created": 1640472330, "model": "davinci-instruct-v3:2021-11-19", "choices": [{"text": "\n\n#include <stdio.h>\n\n#include <stdlib.h>\n\n#include <string.h>\n\n\n\nint main()\n\n{\n\nchar buf[1024];\n\nchar *c;\n\nunsigned int n;\n\nstruct cbor_value cv;\n\n\n\nprintf(\"COSE CBOR:\n\n\");\n\ncb_encode(&buf, &cv);\n\nprintf(\"%s\", buf);\n\n\n\nfree(buf);\n\nreturn 0;\n\n}", "index": 0, "logprobs": null, "finish_reason": "stop"}]}
+
+┌──(breakshacker㉿MSI)-[/mnt/c/Users/santi]
+└─$ bash request_ai.sh
+Bienvenid@, haz tu pregunta o comentario ----> \n\n
+Haz un programa en python que cree un COSE a partir de un CBOR
+{"id": "cmpl-4JA5clibny6RmMJqyRikYS7mDSgnv", "object": "text_completion", "created": 1640472364, "model": "davinci-instruct-v3:2021-11-19", "choices": [{"text": "\n\n#!/usr/bin/env python import cbor import os c = cbor.COSE() c.add_header(\"foo\", \"bar\") with open(\"foo.cose\", \"wb\") as f: f.write(c.encode())", "index": 0, "logprobs": null, "finish_reason": "stop"}]}
